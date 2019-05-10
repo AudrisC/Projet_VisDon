@@ -1,7 +1,7 @@
 const fs = require('fs')
 const d3 = require('d3')
 const fetch = require('node-fetch')
-const csv = fs.readFileSync('data.csv', 'utf-8')
+const csv = fs.readFileSync('data_propreNuités.csv', 'utf-8')
 const R = require('ramda')
 const csvToJson = d3.csvParse
 const json = csvToJson(csv)
