@@ -1,11 +1,12 @@
 #mapid { 
-    height: 500px; 
+    height: 700px; 
     margin: 50px;
-
 }
 
-#cantonid { 
-    height: 500px; 
-    margin: 50px;
-
+.svg_dessin{
+    text-align: center;
+    color: gray;
+    font-size: 25px;
+    font-weight: bold;
 }
+

@@ -15,77 +15,77 @@
 </head>
 
 <body>
-
-  <body>
-    <header>
-      <div class="bg-dark collapse" id="navbarHeader" style="">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Le tourisme réalise une valeur ajoutée brute de 16 milliards de francs. C'est 2,6%
-                de
-                la valeur ajoutée brute totale de la Suisse. Swiss Hôtel Association compte plus de 4'768 hôtel en
-                Suisse.
-                C'est également plus de 165 000 emplois à plein-temps. Il est important de bien comprendre où le
-                tourisme
-                se déveoppe pour suivre la demande. </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Projet</h4>
-              <ul class="list-unstyled">
-                <p class="text-muted">Réalisé dans le cadre du cours de Visualisation de donnlées</p>
-              </ul>
-            </div>
+  <header>
+    <div class="bg-dark collapse" id="navbarHeader" style="">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Le tourisme réalise une valeur ajoutée brute de 16 milliards de francs. C'est 2,6%
+              de
+              la valeur ajoutée brute totale de la Suisse. Swiss Hôtel Association compte plus de 4'768 hôtel en
+              Suisse.
+              C'est également plus de 165 000 emplois à plein-temps. Il est important de bien comprendre où le
+              tourisme
+              se déveoppe pour suivre la demande. </p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Projet</h4>
+            <ul class="list-unstyled">
+              <p class="text-muted">Réalisé dans le cadre du cours de Visualisation de données</p>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-              <circle cx="12" cy="13" r="4"></circle>
-            </svg>
-            <strong>Visualisation de données</strong>
-          </a>
-          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
-            aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <strong>Visualisation de données</strong>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main role="main">
+  <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Tourisme en Suisse</h1>
-          <p class="lead text-muted">Vous souhaitez savoir quel région de la Suisse</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Start here</a>
-          </p>
-        </div>
-      </section>
-
-      <div id="mapid">
-
-      </div>
-
-    </main>
-
-    <footer class="text-muted jumbotron ">
+    <section class="jumbotron text-center">
       <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
+        <h1 class="jumbotron-heading">Tourisme en Suisse</h1>
+        <h4 class="text-muted">Quelles régions de la Suisse les pays d'Europe visitent-ils?</h4>
+        <p class="lead text-muted">En cliquant sur un pays d'Europe, une cartographie des nombres de nuité total en 2017 apparaîtront. </p>
+        <p>
+          <a href="#mapid" class="btn btn-primary my-2">Start here</a>
         </p>
-        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
       </div>
-    </footer>
-    <script src="bundle.js"></script>
-   
-  </body>
+    </section>
+
+    <div id="mapid">
+
+    </div>
+
+  </main>
+
+  <footer class="text-muted jumbotron ">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+      <p>By Audris Chen</p>
+    </div>
+  </footer>
+  <script src="bundle.js"></script>
+
+</body>
 
 </html>

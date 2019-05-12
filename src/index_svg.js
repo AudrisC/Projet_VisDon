@@ -1,34 +1,43 @@
-import {select, geoMercator, geoPath} from 'd3'
-import cantons from '../data/cantons_abbrev.json'; 
-import 'd3'; 
+const d3 = require('d3')
+const cantons = require('../data/cantons_geoms_et_abbrev.json')
+const finalPays = require('./getPays.js')
+
+var pays = finalPays.getFinalPays();
+//console.log(pays);
+
+// une fonction qui prends une abbreviation (p.ex 'VD')
+// et retourne un attribut "d" (p. ex 'M 0 0 L ...')
+const chercherDParAbbrev = abbrev =>
+  pays.find(x => x.abbrev === abbrev).d
 
 
-const body = select(document.body)
-const svg = body.append('svg').attr('viewBox', `0 0 600 200`)
+// une fonction pour créer le svg
+// elle prends "donneesJointes"
+// qui est une liste de "fill" et "d"
+const creerSvg = donneesJointes =>
+  `<svg viewBox="0 0 500 300">
+    ${
+      donneesJointes.map(({ fill, d }) => `<path fill="${fill}" d="${d}" />`).join('\n')
+    }
+  </svg>`
 
-const projection = geoMercator().fitExtent([[0, 0], [600, 200]], cantons)
-const pathCreator = geoPath().projection(projection)
 
-const DATA = cantons.features.map(feature => ({
-    abbrev: feature.properties.abbrev,
-    d: pathCreator(feature),
-}))
+module.exports = valeursParPays => {
+  // l'échelle change dépendant de valeursParPays
+  const echelleCouleur = d3.scaleLinear().domain([
+    d3.min(valeursParPays.map(x => x.valeur)),
+    d3.max(valeursParPays.map(x => x.valeur))
+  ]).range(['yellow', 'red'])
 
-const drawCanton = (svg, pathCreator) => {
-    
-    svg.selectAll('DATA.coordinates') //Mon select all n'est pas détecté
-        .data(DATA.features)
-        .enter()
-        .append('DATA')
-            .attr('class', 'cantion')
-            .attr('d', pathCreator)
-            .attr('fill', 'none')
-            .attr('stroke', 'steelblue')
-            .attr('stroke-width', 2)
-            .attr('stroke-linecap', 'round')
+  // joins "valeursParPays" aux "d" des cantons
+  // retourne une liste de "fill" et "d"
+  const joindre = valeursParPays =>
+    valeursParPays.map(({ abbrev, valeur }) => ({
+      fill: echelleCouleur(valeur),
+      d: chercherDParAbbrev(abbrev),
+    }))
 
+  const donneesJointes = joindre(valeursParPays)
+  return creerSvg(donneesJointes)
 
 }
-
-
-drawCanton(svg, pathCreator)
