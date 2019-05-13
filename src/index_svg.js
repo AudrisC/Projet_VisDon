@@ -1,5 +1,4 @@
 const d3 = require('d3')
-const cantons = require('../data/cantons_geoms_et_abbrev.json')
 const finalPays = require('./getPays.js')
 
 var pays = finalPays.getFinalPays();

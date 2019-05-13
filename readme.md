@@ -24,4 +24,10 @@ Ce que vous souhaitez démontrer
     Montrer les régions les plus visités en Suisse par les européens.
 
 Le publique cible
-    Le tourisme suisse ou les développeurs de projet urbains 
+    Les acteurs du tourisme suisse (agence de tourisme, site de réservations, etc...) ou les développeurs de projet urbains 
+
+Références : 
+- Cours VisualDon : https://github.com/idris-maps/heig-datavis-2019 
+- https://observablehq.com/@idris-maps/cantons 
+- Leaflet : https://leafletjs.com 
+- Forum : StackOverFlow

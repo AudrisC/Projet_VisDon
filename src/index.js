@@ -1,13 +1,9 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'css/style.css';
-import 'index_svg.js';
-
 import L from 'leaflet';
 import data from '../data/pays_poly_cantons.json';
 
-
-const R = require('ramda')
 const finalPays = require('./getPays.js')
 const d3 = require('d3')
 
@@ -76,7 +72,7 @@ geojson.eachLayer(function (layer) {
 	layer.bindPopup(popup, {
 		maxWidth: "auto"
 	  });
-	console.log(listPays);
+	//console.log(listPays);
 	//layer.bindPopup(layer.feature.properties.name);
 });
 
